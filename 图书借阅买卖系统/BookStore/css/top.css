@@ -1,0 +1,55 @@
+@font-face {
+	font-family:'benmochenhei';
+	src: url(../font/benmochenhei.ttf);
+}
+a{
+	
+}
+body{
+	margin: 0px;
+	width:100%;
+}
+.anima-style{
+	transition-duration: 1s;
+}
+#top{
+	height: 36px;
+	width: 100%;
+	position: relative;
+}
+#top-red-line{
+	width: 100%;
+	height: 100%;
+	background-color: #e60012;
+}
+#logo-content{
+	font-family:benmochenhei;
+	color: white;
+	font-size: 27px;
+	line-height: 90px;
+}
+#top-red-line a{
+	font-size: 12px;
+	float: right;
+	text-align: center;
+	width: 50px;
+	line-height: 26px;
+	margin-top: 6px;
+	margin-right: 5px;
+	color: white;
+	border-radius: 7px;
+	display: block;
+	font-weight: bold;
+	
+}
+#top-red-line a:hover{
+	background-color: black;
+}
+#logo{
+	height: 80px;
+	width: 130px;
+	margin-left: 130px;
+	background-color: black;
+	text-align: center;
+	position: absolute;
+}

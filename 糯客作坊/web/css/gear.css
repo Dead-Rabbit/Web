@@ -1,0 +1,50 @@
+@keyframes around{
+	0%{
+		transform: rotate(0);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+.gear{
+	animation-name: around;
+	-webkit-animation-name: around;
+	-moz-animation-name: around;
+	-ms-animation-name: around;
+	animation-iteration-count:infinite;
+	-webkit-animation-iteration-count:infinite;
+	-moz-animation-iteration-count:infinite;
+	-ms-animation-iteration-count:infinite;
+}
+#gearImg1{
+	position: absolute;
+	display: block;
+	height: 40px;
+	width: 40px;
+	top: 33%;
+	left: 23%;
+	animation-duration: 3s;
+	-webkit-animation-duration: 3s;
+	-moz-animation-duration: 3s;
+	-ms-animation-duration: 3s;
+	animation-timing-function: linear;
+	-webkit-animation-timing-function: linear;
+	-moz-animation-timing-function: linear;
+	-ms-animation-timing-function: linear;
+}
+#gearImg2{
+	position: absolute;
+	display: block;
+	height: 80px;
+	width: 80px;
+	top: 50%;
+ 	left: 73%;
+	animation-duration: 2s;
+	-webkit-animation-duration: 2s;
+	-moz-animation-duration: 2s;
+	-ms-animation-duration: 2s;
+	animation-timing-function: ease;
+	-webkit-animation-timing-function: ease;
+	-moz-animation-timing-function: ease;
+	-ms-animation-timing-function: ease;
+}

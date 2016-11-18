@@ -1,0 +1,58 @@
+@font-face {
+	font-family:'benmochenhei';
+	src: url(../font/benmochenhei.ttf);
+}
+#search{
+	width: 50%;
+	margin-left: 30%;
+	margin-top: 30px;
+	height: 80px;
+}
+#search-area{
+	height: 40%;
+}
+#search-area input{
+	width: 70%;
+	height: 100%;
+	font-size: 13px;
+	border-top: 1px #eee solid;
+	border-left: 1px #eee solid;
+	border-right: 1px #eee solid;
+	border-bottom: 1px #eee solid;
+	padding-left: 9px;
+	outline: none;
+}
+#search-area a{
+	display: inline-block;
+	background-color: #e60012;
+	top:5%;
+	height: 100%;
+	line-height: 40px;
+	width: 15%;
+	text-align: center;
+	color: white;
+	text-decoration: none;
+	border-radius: 5px;
+	font-family: benmochenhei;
+	transition-duration: .2s;
+}
+#search-area a:hover{
+	background-color: #eee;
+	color: black;
+}
+#search-hot{
+	font-size: 13px;
+	display: block;
+	padding-top: 12px;
+	width: 70%;
+	overflow-x:hidden;
+	white-space: nowrap;
+}
+#search-hot a{
+	display: inline;
+	color:black;
+	text-decoration: none;
+}
+#search-hot a:hover{
+	color:orange;
+}
