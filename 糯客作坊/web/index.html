@@ -3,30 +3,35 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=200,height=300"/>
-		<title>糯客作坊canvas</title>
+		<title>糯客作坊</title>
 		<link rel="stylesheet" type="text/css" href="css/knox-canvas.css"/>
 		<link rel="stylesheet" type="text/css" href="css/gear.css"/>
+		<link rel="stylesheet" type="text/css" href="css/top.css"/>
+		<script type="text/javascript" src="js/background.js"></script>
 		<script type="text/javascript" src="js/knox-canvas.js"></script>
 		<style type="text/css">
 			html,body{
 				height: 100%;
 			}
 			body{
-				width: 1038px;
+				width: 100%;
 				margin: 0 auto;
 				position: relative;
-				text-align: center;
 				background-color: #00bbdc;
 			}
 		</style>
 	</head>
 	<body>
+		<img id="background_img" src="img/background/background1.jpg" />
+		<div id="top">
+			<span>糯客作坊</span>
+		</div>
 		<div id="background_content">
 			<div id="canvass">
-				<canvas id="knox_canvas_triangle" width="150" height="300" >
+				<canvas id="knox_canvas_triangle" width="150" height="300" onmousemove="driangle.canvasMouseOver(event)">
 					您的浏览器不支持 canvas 请更换浏览器
 				</canvas>
-				<canvas id="knox_canvas_comma" width="185" height="310"  >
+				<canvas id="knox_canvas_comma" width="185" height="310" onmousemove="comma.canvasMouseOver(event);">
 					您的浏览器不支持 canvas 请更换浏览器
 				</canvas>
 			</div>

@@ -1,13 +1,32 @@
+var logoSize ;
+var comma ;
+var driangle ;
 function can(canvasId,width,height){
 	this.height = height;
 	this.width = width;
+	this.type = 0;
 	this.fillColor = "white";
 	this.canvas = document.getElementById(canvasId);
 	this.ctx = this.canvas.getContext("2d");
 	this.ctx.fillStyle = this.fillColor;
+	this.e = this.e||window.event;
+	this.canvasMouseOver = function(e){
+		var bbox = this.canvas.getBoundingClientRect();
+        var x = e.clientX - bbox.left * (this.canvas.width/bbox.width);
+        var y = e.clientY - bbox.top * (this.canvas.height/bbox.height);
+        if(this.ctx.isPointInPath(x,y)){
+        	changeBackground(this.type);
+        }else{
+        	removeBackground();
+        }
+	}
+	this.canvasMouseLeave = function(){
+		removeBackground();
+	}
 }
 function driangleCanvas(size){
 	can.call(this,"knox_canvas_triangle",150*size,300*size);
+	this.type = 0;
 	this.doDrow = function(){
 		this.ctx.beginPath();
 		
@@ -22,6 +41,7 @@ function driangleCanvas(size){
 }
 function commaCanvas(size){
 	can.call(this,"knox_canvas_comma",185*size,310*size);
+	this.type = 1;
 	this.doDrow = function(){
 		var betCirAndStran = this.width/2;
 		this.ctx.beginPath();
@@ -36,11 +56,23 @@ function commaCanvas(size){
 	}
 }
 window.onload = function(){
-	var logoSize = 1;
+	//初始化
+	doInit();
 	//绘制三角形
-	var driangle = new driangleCanvas(logoSize);
 	driangle.doDrow();
 	//绘制逗号
-	var comma = new commaCanvas(logoSize);
 	comma.doDrow();
 }
+function doInit(){
+	logoSize = 1;
+	comma = new commaCanvas(logoSize);
+	driangle = new driangleCanvas(logoSize);
+}
+function getCanvasPos(canvas,e)  
+{//获取鼠标在canvas上的坐标  
+    var rect = canvas.getBoundingClientRect();
+    return {   
+     x: e.clientX - rect.left * (canvas.width / rect.width),  
+     y: e.clientY - rect.top * (canvas.height / rect.height)  
+   };
+} 
