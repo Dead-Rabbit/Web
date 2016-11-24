@@ -9,24 +9,37 @@
 	background-color: #eee;
 }
 #middle_menu{
+	float: left;
 	background-color: orange;
 	display: inline-block;
 	width: 20%;
 	height: 100%;
 }
-#middle_menu a{
-	text-decoration: none;
-}
-#middle_menu:first-of-type{
+#middle_menu_title{
+	display: block;
+	padding-left: 10%;
+	font-family: benmochenhei;
+	line-height: 60px;
+	font-size:20px;
+	height: 50px;
 	background-color: red;
+}
+#middle_menu>a:first-child{
+	text-decoration: none;
+	color:white;
 }
 #middle_menu ul{
 	padding: 0;
+	margin: 0 auto;
 }
 #middle_menu ul li{
 	display: block;
-	margin-top: 10px;
-	margin-bottom: 10px;
+	text-align: center;
+	line-height: 53px;
+	font-weight: bold;
+}
+#middle_menu ul li a{
+	color: white;
 }
 #middle_menu ul li:hover{
 	background-color: black;

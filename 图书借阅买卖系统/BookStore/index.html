@@ -6,9 +6,14 @@
 		<link rel="stylesheet" type="text/css" href="css/top.css"/>
 		<link rel="stylesheet" type="text/css" href="css/search.css"/>
 		<link rel="stylesheet" type="text/css" href="css/middle.css"/>
+		<link rel="stylesheet" type="text/css" href="css/middle_shows_content.css"/>
+		<link rel="stylesheet" type="text/css" href="css/golden_class.css"/>
+		<link rel="stylesheet" type="text/css" href="css/footer.css"/>
+		<script type="text/javascript" src="js/middle_shows.js"></script>
 		<style type="text/css">
 			html,body{
 				margin: 0 auto;
+				font-family: "微软雅黑";
 			}
 		</style>
 	</head>
@@ -29,33 +34,165 @@
 			</div>
 			<div id="search-hot">
 				最近热搜：
+				<a href="#">Java编程思想</a>
+				<a href="#">Python应用大全</a>
+				<a href="#">白夜行</a>
 				<a href="#">骆驼祥子</a>
-				<a href="#">骆驼祥子</a>
-				<a href="#">骆驼祥子</a>
-				<a href="#">骆驼祥子</a>
-				<a href="#">骆驼祥子</a>
-				<a href="#">骆驼祥子</a>
-				<a href="#">骆驼祥子</a>
-				<a href="#">骆驼祥子</a>
-				<a href="#">骆驼祥子</a>
-				<a href="#">骆驼祥子</a>
-				<a href="#">骆驼祥子</a>
-				<a href="#">骆驼祥子</a>
+				<a href="#">骑马与砍杀战团</a>
 			</div>
 		</div>
 		<div id="middle">
 			<div id="middle_content">
 				<div id="middle_menu">
-					<a href="#">全部图书分类</a>
+					<a id="middle_menu_title" href="#">全部图书分类</a>
 					<ul>
-						<li><a href="#">全部图书分类</a></li>
-						<li><a href="#">全部图书分类</a></li>
-						<li><a href="#">全部图书分类</a></li>
-						<li><a href="#">全部图书分类</a></li>
-						<li><a href="#">全部图书分类</a></li>
+						<li><a href="#">教材教辅</a></li>
+						<li><a href="#">少儿</a></li>
+						<li><a href="#">文学艺术</a></li>
+						<li><a href="#">人文社科</a></li>
+						<li><a href="#">经济管理</a></li>
+						<li><a href="#">励志与成功</a></li>
+						<li><a href="#">科技</a></li>
+						<li><a href="#">生活</a></li>
 					</ul>
+				</div>
+				<div id="middle_shows">
+					<div id="middle_shows_title">
+						<a href="#">租赁</a>
+						<a href="#">购买</a>
+						<a href="#">电子书</a>
+					</div>
+					<!--big 的value 存图片的数量-->
+					<div id="middle_shows_big" value="3">
+						<img id="leftbtn" class="middle_btn" src="img/leftbtn.png" onclick="showGoRight()"/>
+						<img id="rightbtn" class="middle_btn" src="img/rightbtn.png" onclick="showGoLeft()"/>
+						<div id="middle_shows_pics" value="0">
+							<img src="img/testImgs/background0.jpg"/>
+							<img src="img/testImgs/background1.jpg"/>
+							<img src="img/testImgs/background1.jpg"/>
+						</div>
+					</div>
+					<div id="middle_shows_sm">
+						<div class="middle_shows_sm_item">
+							<img src="img/testImgs/background21.jpg"/>
+							<span>这是一本书的介绍很长很长的名字</span>
+						</div>
+						<div class="middle_shows_sm_item">
+							<img src="img/testImgs/background0.jpg"/>
+							<span>this is the second</span>
+						</div>
+						<div class="middle_shows_sm_item">
+							<img src="img/testImgs/background1.jpg"/>
+							<span>这是一本书的介绍很长很长的名字</span>
+						</div>
+						<div class="middle_shows_sm_item">
+							<img src="img/testImgs/cloud.jpg"/>
+							<span>这是一本书的介绍很长很长的名字</span>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
+		<div class="gloden_part">
+			<div class="gloden_title">
+				<span class="gloden_title_content">金牌店铺</span>
+				<a href="#" class="gloden_title_more">更多>></a>
+				<hr />
+			</div>
+			<div class="gloden_part_items">
+				<div class="gloden_part_item">
+					<img class="gloden_item_img" src="img/testImgs/background0.jpg" />
+					<img class="glod" src="img/gloden.png"/>
+					<div class="gloden_name">店铺名称</div>
+				</div>
+				<div class="gloden_part_item">
+					<img class="gloden_item_img" src="img/testImgs/background0.jpg" />
+					<img class="glod" src="img/silver.png"/>
+					<div class="gloden_name">店铺名称</div>
+				</div>
+				<div class="gloden_part_item">
+					<img class="gloden_item_img" src="img/testImgs/background0.jpg" />
+					<img class="glod" src="img/copper.png"/>
+					<div class="gloden_name">店铺名称</div>
+				</div>
+				<div class="gloden_part_item">
+					<img class="gloden_item_img" src="img/testImgs/background0.jpg" />
+					<div class="gloden_name">店铺名称</div>
+				</div>
+				<div class="gloden_part_item">
+					<img class="gloden_item_img" src="img/testImgs/background0.jpg" />
+					<div class="gloden_name">店铺名称</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="gloden_part">
+			<div class="gloden_title">
+				<span class="gloden_title_content">最多借阅</span>
+				<a href="#" class="gloden_title_more">更多>></a>
+				<hr />
+			</div>
+			<div class="gloden_part_items">
+				<div class="gloden_part_item">
+					<img class="gloden_item_img" src="img/testImgs/background0.jpg" />
+					<img class="glod" src="img/gloden.png"/>
+					<div class="gloden_name">书籍名称</div>
+				</div>
+				<div class="gloden_part_item">
+					<img class="gloden_item_img" src="img/testImgs/background0.jpg" />
+					<img class="glod" src="img/silver.png"/>
+					<div class="gloden_name">书籍名称</div>
+				</div>
+				<div class="gloden_part_item">
+					<img class="gloden_item_img" src="img/testImgs/background0.jpg" />
+					<img class="glod" src="img/copper.png"/>
+					<div class="gloden_name">书籍名称</div>
+				</div>
+				<div class="gloden_part_item">
+					<img class="gloden_item_img" src="img/testImgs/background0.jpg" />
+					<div class="gloden_name">书籍名称</div>
+				</div>
+				<div class="gloden_part_item">
+					<img class="gloden_item_img" src="img/testImgs/background0.jpg" />
+					<div class="gloden_name">书籍名称</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="gloden_part">
+			<div class="gloden_title">
+				<span class="gloden_title_content">最多购买</span>
+				<a href="#" class="gloden_title_more">更多>></a>
+				<hr />
+			</div>
+			<div class="gloden_part_items">
+				<div class="gloden_part_item">
+					<img class="gloden_item_img" src="img/testImgs/background0.jpg" />
+					<img class="glod" src="img/gloden.png"/>
+					<div class="gloden_name">书籍名称</div>
+				</div>
+				<div class="gloden_part_item">
+					<img class="gloden_item_img" src="img/testImgs/background0.jpg" />
+					<img class="glod" src="img/silver.png"/>
+					<div class="gloden_name">书籍名称</div>
+				</div>
+				<div class="gloden_part_item">
+					<img class="gloden_item_img" src="img/testImgs/background0.jpg" />
+					<img class="glod" src="img/copper.png"/>
+					<div class="gloden_name">书籍名称</div>
+				</div>
+				<div class="gloden_part_item">
+					<img class="gloden_item_img" src="img/testImgs/background0.jpg" />
+					<div class="gloden_name">书籍名称</div>
+				</div>
+				<div class="gloden_part_item">
+					<img class="gloden_item_img" src="img/testImgs/background0.jpg" />
+					<div class="gloden_name">书籍名称</div>
+				</div>
+			</div>
+		</div>
+		<footer>
+			<a href="#">@Powered By Bob and Jack</a>
+		</footer>
 	</body>
 </html>

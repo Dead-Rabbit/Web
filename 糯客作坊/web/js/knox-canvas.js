@@ -67,6 +67,9 @@ function doInit(){
 	logoSize = 1;
 	comma = new commaCanvas(logoSize);
 	driangle = new driangleCanvas(logoSize);
+	
+	var list_ul = document.getElementById("list_ul");
+	list_ul.style.transform = "translateY(0px)";
 }
 function getCanvasPos(canvas,e)  
 {//获取鼠标在canvas上的坐标  

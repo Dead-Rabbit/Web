@@ -7,8 +7,16 @@
 		<link rel="stylesheet" type="text/css" href="css/knox-canvas.css"/>
 		<link rel="stylesheet" type="text/css" href="css/gear.css"/>
 		<link rel="stylesheet" type="text/css" href="css/top.css"/>
+		<link rel="stylesheet" type="text/css" href="css/person_page.css"/>
 		<script type="text/javascript" src="js/background.js"></script>
 		<script type="text/javascript" src="js/knox-canvas.js"></script>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script type="text/javascript" src="js/lib/jquery.imagesloaded.js"></script>
+		<script type="text/javascript" src="js/lib/jquery.lettering.js"></script>
+		<script type="text/javascript" src="js/lib/mustache.js"></script>
+		<script type="text/javascript" src="js/lib/quantize.js"></script>
+		<script type="text/javascript" src="js/color-thief.js"></script>
+		<script type="text/javascript" src="js/pelple_list.js"></script>
 		<style type="text/css">
 			html,body{
 				height: 100%;
@@ -17,26 +25,61 @@
 				width: 100%;
 				margin: 0 auto;
 				position: relative;
-				background-color: #00bbdc;
 			}
+			ul{margin:0;padding:0;}
+			a{text-decoration: none;}
 		</style>
 	</head>
 	<body>
-		<img id="background_img" src="img/background/background1.jpg" />
-		<div id="top">
-			<span>糯客作坊</span>
+		<div id="totalBackground" style="z-index:-10;position: absolute;height:100%;width:100%;background-color: #00bbdc;"></div>
+		<img id="background_img" src="img/background/background0.jpg" />
 		</div>
-		<div id="background_content">
+		<!--header-->
+		<div id="top">
+			<span id="top_title">糯客作坊</span>
+			<div >
+				<a href="#">前端</a>
+				<a href="#">后台</a>
+			</div>
+		</div>
+		<div id="background_content" style="display: none;">
 			<div id="canvass">
-				<canvas id="knox_canvas_triangle" width="150" height="300" onmousemove="driangle.canvasMouseOver(event)">
+				<canvas id="knox_canvas_triangle" width="150" height="300" onmousemove="driangle.canvasMouseOver(event)" onmouseleave="driangle.canvasMouseLeave()">
 					您的浏览器不支持 canvas 请更换浏览器
 				</canvas>
-				<canvas id="knox_canvas_comma" width="185" height="310" onmousemove="comma.canvasMouseOver(event);">
+				<canvas id="knox_canvas_comma" width="185" height="310" onmousemove="comma.canvasMouseOver(event);" onmouseleave="comma.canvasMouseLeave()">
 					您的浏览器不支持 canvas 请更换浏览器
 				</canvas>
 			</div>
 			<img id="gearImg1" class="gear" src="img/chilun1.png" />
 			<img id="gearImg2" class="gear" src="img/chilun0.png" />
 		</div>
+		<!--人物介绍-->
+		<div id="knox_designer" class="person_page">
+			<div class="person_list">
+				<div class="year_control">
+					<a class="year_btn" style="float: left;"><</a>
+					<a class="year_btn" style="float: right;">></a>
+					<span>1996</span>
+				</div>
+				<a class="up_and_down">▲</a>
+				<div id="people_list_ul" class="people_list_ul" onmousewheel="mouseWheInterface(event)">
+					<ul id="list_ul">
+						<li onclick="changPeople('./img/people/test1.jpeg')"><a >王子潇</a></li>
+						<li onclick="changPeople('./img/people/people2.jpg')"><a >李一凡</a></li>
+						<li><a >刘甜甜</a></li>
+						<li><a >刘凌峰</a></li>
+						<li><a >汤圆</a></li>
+						<li><a >王子潇</a></li>
+						<li><a >李一凡</a></li>
+						<li><a >刘甜甜</a></li>
+						<li><a >刘凌峰</a></li>
+						<li><a >汤圆</a></li>
+					</ul>
+				</div>
+				<a class="up_and_down" >▼</a>
+			</div>
+		</div>
+		<div id="knox_coder" class="person_page" style="display: none;">
 	</body>
 </html>
