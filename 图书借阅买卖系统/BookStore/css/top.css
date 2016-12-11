@@ -1,3 +1,7 @@
+html,body{
+	margin: 0 auto;
+	font-family: "微软雅黑";
+}
 @font-face {
 	font-family:'benmochenhei';
 	src: url(../font/benmochenhei.ttf);

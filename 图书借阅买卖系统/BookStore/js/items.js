@@ -1,0 +1,76 @@
+//热搜内容:
+var hotSearchJson = {
+	'hots':[{
+		'name':'Java编程思想',
+		'id':'1'
+	},{
+		'name':'Python',
+		'id':'2'
+	},{
+		'name':'Java编',
+		'id':'3'
+	},{
+		'name':'Java想',
+		'id':'4'
+	},{
+		'name':'Java思',
+		'id':'5'
+	}]
+};
+//金牌店铺
+var goldenStore = {
+	'stores':[{
+		'name':'store1',
+		'id':'1'
+	},{		
+		'name':'store2',
+		'id':'2'
+	},{		
+		'name':'store3',
+		'id':'3'
+	},{		
+		'name':'store4',
+		'id':'4'
+	},{		
+		'name':'store5',
+		'id':'5'
+	}]
+};
+//最多借阅
+var mostRent = {
+	'stores':[{
+		'name':'store2',
+		'id':'2'
+	},{
+		'name':'store2',
+		'id':'2'
+	},{
+		'name':'store3',
+		'id':'3'
+	},{
+		'name':'store4',
+		'id':'4'
+	},{
+		'name':'store5',
+		'id':'5'
+	}]
+};
+//最多购买
+var mostBuy = {
+	'stores':[{
+		'name':'store1',
+		'id':'1'
+	},{		
+		'name':'store2',
+		'id':'2'
+	},{
+		'name':'store3',
+		'id':'3'
+	},{		
+		'name':'store4',
+		'id':'4'
+	},{		
+		'name':'store5',
+		'id':'5'
+	}]
+};
