@@ -1,0 +1,74 @@
+body,html{
+	margin:0 auto;
+	width: 100%;
+	font-family: "微软雅黑";
+}
+a{
+	text-decoration: none;
+	cursor: pointer;
+}
+header{
+	border-bottom: 5px solid #E60012;
+	width: 100%;
+	position: absolute;
+}
+header img{
+	display: inline-block;
+	padding-left: 100px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	height: 90%;
+}
+header span{
+	position: absolute;
+	line-height: 96px;
+	top: 5px;
+	padding-left: 30px;
+	font-size: 22px;
+	margin-left: 30px;
+	border-left: 1px solid black;
+}
+header a{
+	position: absolute;
+	bottom: 10px;
+	font-size: 15px;
+	right: 10px;
+}
+table{
+	position: absolute;
+	left: 37.5%;
+	width: 25%;
+	top: 170px;
+}
+table td{
+	line-height: 40px;
+}
+.tipe{
+	height: 100%;
+	width: 95%;
+	padding-left: 10px;
+	font-size: 14px;
+}
+.upload{
+	display: inline-block;
+	border-radius: 5px;
+	height: 100%;
+	width: 100%;
+	background-color: #E60012;
+	text-decoration: none;
+	color: white;
+	text-align: center;
+	font-size: 15px;
+}
+.changeMode{
+	display: inline-block;
+	position: absolute;
+	right: 0;
+	font-size: 13px;
+	cursor: pointer;
+}
+footer{
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+}
